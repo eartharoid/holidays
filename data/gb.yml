@@ -1,0 +1,199 @@
+$schema: https://holidays.eartharoid.me/schema.json
+ISO-3166-1-alpha-2: GB
+languages:
+  - en
+timezones:
+  - Europe/London
+holidays:
+  GoldenJubileeBankHoliday:
+    dates:
+      - name:
+          en: Golden Jubilee bank holiday
+        startYear: 2002
+        endYear: 2002
+        fixed: [June, 3]
+        type: public
+    sources:
+      - https://en.wikipedia.org/wiki/Public_holidays_in_the_United_Kingdom#Changes
+  DiamondJubileeBankHoliday:
+    dates:
+      - name:
+          en: Diamond Jubilee bank holiday
+        startYear: 2012
+        endYear: 2012
+        fixed: [June, 5]
+        type: public
+    sources:
+      - https://en.wikipedia.org/wiki/Public_holidays_in_the_United_Kingdom#Changes
+  GoodFriday:
+    dates:
+      - name:
+          en: Good Friday
+        startYear: null
+        endYear: null
+        computed:
+          computus: -2 # https://github.com/rhnorskov/computus
+        type: public
+    sources:
+      - https://en.wikipedia.org/wiki/Bank_holiday
+      - https://en.wikipedia.org/wiki/Date_of_Easter#Anonymous_Gregorian_algorithm
+  EarlyMayBankHoliday:
+    dates:
+      - name:
+          en: Early May bank holiday
+        startYear: null
+        endYear: null
+        computed:
+          first:
+            weekday: Monday
+            in: May
+        type: public
+      - name:
+          en: Early May bank holiday (VE day)
+        startYear: 1995
+        endYear: 1995
+        fixed: [May, 8]
+        type: public
+      - name:
+          en: Early May bank holiday (VE day)
+        startYear: 2020
+        endYear: 2020
+        fixed: [May, 8]
+        type: public
+    sources:
+      - https://en.wikipedia.org/wiki/Public_holidays_in_the_United_Kingdom
+      - https://en.wikipedia.org/wiki/Bank_holiday 
+      - https://en.wikipedia.org/wiki/May_Day#United_Kingdom
+      - https://www.bbc.co.uk/news/uk-48565417
+  SpringBankHoliday:
+    dates:
+      - name:
+          en: Spring bank holiday
+        startYear: null
+        endYear: null
+        computed:
+          last: 
+            weekday: Monday
+            in: May
+        type: public
+      - name:
+          en: Spring bank holiday
+        startYear: 2002
+        endYear: 2002
+        fixed: [June, 4]
+        type: public
+      - name:
+          en: Spring bank holiday
+        startYear: 2012
+        endYear: 2012
+        fixed: [June, 4]
+        type: public
+      - name:
+          en: Spring bank holiday
+        startYear: 2022
+        endYear: 2022
+        fixed: [June, 2]
+        type: public
+    sources:
+      - https://en.wikipedia.org/wiki/Public_holidays_in_the_United_Kingdom
+      - https://en.wikipedia.org/wiki/Bank_holiday 
+      - https://www.gov.uk/government/news/extra-bank-holiday-to-mark-the-queens-platinum-jubilee-in-2022
+  PlatinumJubileeBankHoliday:
+    dates:
+      - name:
+          en: Platinum Jubilee bank holiday
+        startYear: 2022
+        endYear: 2022
+        fixed: [June, 3]
+        type: public
+    sources:
+      - https://www.gov.uk/bank-holidays
+      - https://www.gov.uk/government/news/extra-bank-holiday-to-mark-the-queens-platinum-jubilee-in-2022
+  BankHolidayForTheStateFuneralOfQueenElizabethII:
+    dates:
+      - name:
+          en: Bank Holiday for the State Funeral of Queen Elizabeth II
+        startYear: 2022
+        endYear: 2022
+        fixed: [September, 19]
+        type: public
+    sources:
+      - https://www.gov.uk/bank-holidays
+      - https://www.gov.uk/government/news/bank-holiday-announced-for-her-majesty-queen-elizabeth-iis-state-funeral-on-monday-19-september
+  BankHolidayForTheCoronationOfKingCharlesIII:
+    dates:
+      - name:
+          en: Bank holiday for the coronation of King Charles III
+        startYear: 2023
+        endYear: 2023
+        fixed: [May, 8]
+        type: public
+    sources:
+      - https://www.gov.uk/bank-holidays
+      - https://www.gov.uk/government/news/bank-holiday-proclaimed-in-honour-of-the-coronation-of-his-majesty-king-charles-iii
+  ChristmasDay:
+    dates:
+      - name:
+          en: Christmas Day
+        startYear: null
+        endYear: null
+        fixed: [December, 25]
+        type: public
+      - name:
+          en: Christmas Day (substitute day)
+        startYear: null
+        endYear: null
+        fixed: [December, 27]
+        condition: december.25.weekday == 'Saturday' || december.25.weekday == 'Sunday' # https://github.com/silentmatt/expr-eval
+        type: public
+    sources:
+      - https://en.wikipedia.org/wiki/Public_holidays_in_the_United_Kingdom
+  BoxingDay:
+    dates:
+      # the first array item with a null start and end year is the default
+      - name:
+          en: Boxing Day
+        startYear: null
+        endYear: null
+        fixed: [December, 26]
+        condition: december.26.weekday != 'Sunday'
+        type: public
+      - name:
+          en: Boxing Day (substitute day)
+        startYear: null
+        endYear: null
+        fixed: [December, 28]
+        condition: december.25.weekday == 'Saturday' || december.26.weekday == 'Saturday'
+        type: public
+    sources:
+      - https://en.wikipedia.org/wiki/Public_holidays_in_the_United_Kingdom
+subdivisions:
+  GB-EAW: &GB-EAW
+    holidays:
+      NewYearsDay:
+        dates:
+          - name:
+              en: New Year's Day
+            startYear: null
+            endYear: null
+            # TODO:
+            type: public
+      EasterMonday: &EasterMonday
+        dates:
+          - name:
+              en: Easter Monday
+            startYear: null
+            endYear: null
+            computed:
+              computus: 1 # https://github.com/rhnorskov/computus
+            type: public
+        sources:
+          - https://en.wikipedia.org/wiki/Bank_holiday
+          - https://en.wikipedia.org/wiki/Date_of_Easter#Anonymous_Gregorian_algorithm
+  GB-ENG: *GB-EAW
+  GB-CYM: *GB-EAW
+  GB-NIR:
+    holidays:
+      EasterMonday: *EasterMonday
+  GB-SCT:
+  GB-WLS: *GB-EAW
