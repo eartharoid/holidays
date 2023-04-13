@@ -1,0 +1,1 @@
+# `@eartharoid/holidays-static`

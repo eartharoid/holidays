@@ -1,0 +1,1 @@
+holidays.init({data})
