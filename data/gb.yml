@@ -37,18 +37,6 @@ GB:
       sources:
         - https://en.wikipedia.org/wiki/Bank_holiday
         - https://en.wikipedia.org/wiki/Date_of_Easter#Anonymous_Gregorian_algorithm
-    EasterSunday:
-      dates:
-        - name:
-            en: Easter
-          startYear: null
-          endYear: null
-          computed:
-            computus: 0
-          type: observance
-      sources:
-        - https://en.wikipedia.org/wiki/Bank_holiday
-        - https://en.wikipedia.org/wiki/Date_of_Easter#Anonymous_Gregorian_algorithm
     EarlyMayBankHoliday:
       dates:
         - name:
@@ -156,8 +144,8 @@ GB:
           startYear: null
           endYear: null
           fixed: [December, 27]
-          condition: december.25.weekday == 'Saturday' || december.25.weekday == 'Sunday' # https://github.com/silentmatt/expr-eval
           type: public
+          condition: december.25.weekday == 'Saturday' || december.25.weekday == 'Sunday' # https://github.com/silentmatt/expr-eval
       sources:
         - https://en.wikipedia.org/wiki/Public_holidays_in_the_United_Kingdom
     BoxingDay:
@@ -167,15 +155,14 @@ GB:
           startYear: null
           endYear: null
           fixed: [December, 26]
-          condition: december.26.weekday != 'Sunday'
           type: public
         - name:
             en: Boxing Day (substitute day)
           startYear: null
           endYear: null
           fixed: [December, 28]
-          condition: december.25.weekday == 'Saturday' || december.26.weekday == 'Saturday'
           type: public
+          condition: december.26.weekday == 'Saturday' || december.26.weekday == 'Sunday'
       sources:
         - https://en.wikipedia.org/wiki/Public_holidays_in_the_United_Kingdom
   subdivisions:
@@ -188,8 +175,24 @@ GB:
                 en: New Year's Day
               startYear: null
               endYear: null
-              # TODO:
+              fixed: [January, 1]
               type: public
+            - name:
+                en: New Year's Day (substitute day)
+              startYear: null
+              endYear: null
+              fixed: [January, 2]
+              type: public
+              condition: substitutes.weekday == 'Sunday'
+            - name:
+                en: New Year's Day (substitute day)
+              startYear: null
+              endYear: null
+              fixed: [January, 3]
+              type: public
+              condition: substitutes.weekday == 'Saturday'
+          sources:
+            - https://en.wikipedia.org/wiki/Public_holidays_in_the_United_Kingdom
         EasterMonday: &EasterMonday
           dates:
             - name:
