@@ -1,15 +1,38 @@
 # Holidays
 
-An API, JavaScript library, and static data files for information about public holidays in [supported countries](#countries),
-created because [Nager.Date](https://github.com/nager/Nager.Date) wasn't good enough, and $349/year for [HolidayAPI](https://holidayapi.com/) is ridiculous.
+Data and APIs for public/bank holidays in [supported countries](#countries).
 
 ## Why?
 
+To add a [minor feature](https://github.com/discord-tickets/bot/issues/403) to one of my other projects,
+I needed a simple way to check if today is a holiday that worked for most countries, and I wasn't satisfied with the existing solutions.
+Unfortunately, holidays are not as simple as they seem (*cough* Scotland).
+
+### What's wrong with existing solutions?
+
+Most of them work, but after looking at several open-source projects that calculate dates,
+I was stuck thinking about how the code would be better represented as data.
+
+- <https://www.gov.uk/bank-holidays.json>: only works for the UK
+- [Nager.Date](https://github.com/nager/Nager.Date): accurate, but the API isn't flexible enough to overcome regional inconsistencies, not multi-lingual
+- [holidayapi.com](https://holidayapi.com/): stupidly expensive
+- [timeanddate.com](https://dev.timeanddate.com/holidays/): probably very good, but even more stupidly expensive
+- [Azure Open Datasets](https://learn.microsoft.com/en-us/azure/open-datasets/dataset-public-holidays): difficult to access, probably doesn't get updated
+- [enrico](https://github.com/jurajmajer/enrico): weird API and uses XML
+- [python-holidays](https://github.com/dr-prodigy/python-holidays): excellent, but I didn't want to make an API in python
+- [workalendar](https://github.com/workalendar/workalendar): good, but python again
+- [date-holidays](https://github.com/commenthol/date-holidays): FINALLY! someone decided to make data with rules instead of code.... but not well.
+In my opinion, its far more confusing and difficult to follow or update than any of the solutions above that use code
+
 ### Goals and scope
+
+There have been many changed and additional UK holidays in the last few years,
+so this was made with the following goals in mind:
 
 ## Limitations
 
-Although it can be if someone puts the time in, this shouldn't be expected to be historically accurate.
+- Although it can be if someone does the research, this shouldn't be expected to be historically accurate.
+- https://www.officeholidays.com/countries/united-kingdom https://support.google.com/calendar/answer/6084659
 
 ## [HTTP API](https://github.com/eartharoid/holidays/tree/main/api#readme)
 
@@ -30,16 +53,12 @@ Must be paired with `@eartharoid/holidays-calculator` or
 pre-computed data (e.g. `@eartharoid/holidays-static`)
 to be useful.
 
-[**Read the documentation →**](https://github.com/eartharoid/holidays/tree/main/packages/holidays.js#readme)
-
 #### [@eartharoid/holidays-calculator](https://github.com/eartharoid/holidays/tree/main/packages/holidays-calculator.js#readme)
 
 This is the core library that calculates the dates of holidays in a given year using
 [the rules data](https://github.com/eartharoid/holidays/tree/main/data).
 It is used to generate the static data files in [`dist`](https://github.com/eartharoid/holidays/tree/main/dist)
 and `@eartharoid/holidays-static`.
-
-[**Read the documentation →**](https://github.com/eartharoid/holidays/tree/main/packages/holidays-calculator.js#readme)
 
 #### [@eartharoid/holidays-static](https://github.com/eartharoid/holidays/tree/main/packages/holidays-static.js#readme)
 
@@ -62,9 +81,9 @@ e.g. <https://cdn.jsdelivr.net/gh/eartharoid/holidays/dist/v1/2023/gb.json>
 
 ## Countries
 
-**Please consider sponsoring (or donating to) your country's contributors.**
+Please consider sponsoring (or donating to) your country's contributors.
 
-- [x] **United Kingdom (GB)** - [@eartharoid](https://github.com/eartharoid)
+- [x] United Kingdom (GB) - [@eartharoid](https://github.com/eartharoid)
 
 ## Contributing
 

@@ -144,6 +144,7 @@ GB:
           startYear: null
           endYear: null
           fixed: [December, 27]
+          substitute: true
           type: public
           condition: december.25.weekday == 'Saturday' || december.25.weekday == 'Sunday' # https://github.com/silentmatt/expr-eval
       sources:
@@ -161,6 +162,7 @@ GB:
           startYear: null
           endYear: null
           fixed: [December, 28]
+          substitute: true
           type: public
           condition: december.26.weekday == 'Saturday' || december.26.weekday == 'Sunday'
       sources:
@@ -182,6 +184,7 @@ GB:
               startYear: null
               endYear: null
               fixed: [January, 2]
+              substitute: true
               type: public
               condition: substitutes.weekday == 'Sunday'
             - name:
@@ -189,6 +192,7 @@ GB:
               startYear: null
               endYear: null
               fixed: [January, 3]
+              substitute: true
               type: public
               condition: substitutes.weekday == 'Saturday'
           sources:
