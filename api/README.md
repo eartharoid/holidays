@@ -9,7 +9,7 @@ I'd also appreciate it if you set the [`User-Agent`](https://developer.mozilla.o
 Example:
 
 ```http
-User-Agent: DiscordTickets/4.0.0 (https://discordtickets.app)
+User-Agent: DiscordTickets/4.0.0 (+https://discordtickets.app)
 ```
 
 ## Routes

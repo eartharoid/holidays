@@ -5,26 +5,6 @@ GB:
   timezones:
     - Europe/London
   holidays:
-    GoldenJubileeBankHoliday:
-      dates:
-        - name:
-            en: Golden Jubilee bank holiday
-          startYear: 2002
-          endYear: 2002
-          fixed: [June, 3]
-          type: public
-      sources:
-        - https://en.wikipedia.org/wiki/Public_holidays_in_the_United_Kingdom#Changes
-    DiamondJubileeBankHoliday:
-      dates:
-        - name:
-            en: Diamond Jubilee bank holiday
-          startYear: 2012
-          endYear: 2012
-          fixed: [June, 5]
-          type: public
-      sources:
-        - https://en.wikipedia.org/wiki/Public_holidays_in_the_United_Kingdom#Changes
     GoodFriday:
       dates:
         - name:
@@ -61,6 +41,7 @@ GB:
           fixed: [May, 8]
           type: public
       sources:
+        - https://www.gov.uk/bank-holidays
         - https://en.wikipedia.org/wiki/Public_holidays_in_the_United_Kingdom
         - https://en.wikipedia.org/wiki/Bank_holiday 
         - https://en.wikipedia.org/wiki/May_Day#United_Kingdom
@@ -98,6 +79,26 @@ GB:
         - https://en.wikipedia.org/wiki/Public_holidays_in_the_United_Kingdom
         - https://en.wikipedia.org/wiki/Bank_holiday 
         - https://www.gov.uk/government/news/extra-bank-holiday-to-mark-the-queens-platinum-jubilee-in-2022
+    GoldenJubileeBankHoliday:
+      dates:
+        - name:
+            en: Golden Jubilee bank holiday
+          startYear: 2002
+          endYear: 2002
+          fixed: [June, 3]
+          type: public
+      sources:
+        - https://en.wikipedia.org/wiki/Public_holidays_in_the_United_Kingdom#Changes
+    DiamondJubileeBankHoliday:
+      dates:
+        - name:
+            en: Diamond Jubilee bank holiday
+          startYear: 2012
+          endYear: 2012
+          fixed: [June, 5]
+          type: public
+      sources:
+        - https://en.wikipedia.org/wiki/Public_holidays_in_the_United_Kingdom#Changes
     PlatinumJubileeBankHoliday:
       dates:
         - name:

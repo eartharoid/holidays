@@ -1,3 +1,11 @@
+# 🚧 Work in progress 🚧
+
+> https://github.com/workalendar/workalendar/blob/master/workalendar/europe/united_kingdom.py
+> https://github.com/workalendar/workalendar/blob/master/workalendar/europe/united_kingdom.py
+> https://www.ukbankholidays.co.uk/
+> https://en.wikipedia.org/wiki/Wedding_of_Princess_Anne_and_Mark_Phillips
+> https://en.wikipedia.org/wiki/Public_holidays_in_the_United_Kingdom
+
 # Holidays
 
 Data and APIs for public/bank holidays in [supported countries](#countries).
