@@ -48,15 +48,15 @@ so this was made with the following goals in mind:
 
 You can use the data either
 
-- through the [HTTP API](/eartharoid/holidays/tree/main/api#readme)
+- through the [HTTP API](/api#readme)
 - by downloading or building a database (which can optionally queried with a helper library)
 
-## [HTTP API](/eartharoid/holidays/tree/main/api#readme)
+## [HTTP API](/api#readme)
 
 Data for the last decade, the current decade, and the next decade (currently 2010-2039 inclusive)
 is available for [supported countries](#countries) with the free API.
 
-[**Read the documentation →**](/eartharoid/holidays/tree/main/api#readme)
+[**Read the documentation →**](/api#readme)
 
 
 ## Databases
@@ -93,7 +93,7 @@ https://static.eartharoid.me/holidays/v1/gb.sm.json
 
 ## Libraries
 
-- [JavaScript](/eartharoid/holidays/tree/main/packages/holidays.js#readme)
+- [JavaScript](/packages/holidays.js#readme)
 
 ## Countries
 
