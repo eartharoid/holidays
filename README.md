@@ -1,12 +1,12 @@
 # 🚧 Work in progress 🚧
 
 > https://github.com/workalendar/workalendar/blob/master/workalendar/europe/united_kingdom.py
-> https://github.com/workalendar/workalendar/blob/master/workalendar/europe/united_kingdom.py
 > https://www.ukbankholidays.co.uk/
 > https://en.wikipedia.org/wiki/Wedding_of_Princess_Anne_and_Mark_Phillips
 > https://en.wikipedia.org/wiki/Public_holidays_in_the_United_Kingdom
 > https://github.com/commenthol/date-holidays/blob/master/docs/specification.md#citations-sources-and-attribution
 > https://github.com/commenthol/date-holidays/blob/master/docs/specification.md#types-of-holidays
+> https://en.wikipedia.org/wiki/Civil_Service_(United_Kingdom)#Privilege_days
 
 # Holidays
 
@@ -51,7 +51,7 @@ You can use the data either
 - through the [HTTP API](/api#readme)
 - by downloading or building a database (which can optionally queried with a helper library)
 
-## [HTTP API](/api#readme)
+## HTTP API
 
 Data for the last decade, the current decade, and the next decade (currently 2010-2039 inclusive)
 is available for [supported countries](#countries) with the free API.
