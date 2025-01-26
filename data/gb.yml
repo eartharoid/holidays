@@ -169,7 +169,6 @@ GB:
       sources:
         - https://en.wikipedia.org/wiki/Public_holidays_in_the_United_Kingdom
   subdivisions:
-    GB-CYM: *GB-EAW
     GB-EAW: &GB-EAW
       holidays:
         NewYearsDay:
